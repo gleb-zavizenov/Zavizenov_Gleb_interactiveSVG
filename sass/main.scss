@@ -296,3 +296,57 @@
         height:100%;
     }
 }
+
+
+//
+// Styles for tablet version
+//
+@media screen and (min-width:720px){
+    .container{
+        width:720px;
+    }
+
+    // Emoji blocks
+    .emoji-blocks{
+        flex-direction: row;
+        width:100%;
+        justify-content: space-between;
+    }
+
+    .emoji-block{
+        width:320px;
+        height: 256px;
+    }
+
+    .emoji-text{
+        font-size:24px;
+        line-height: 29px;
+    }
+
+    // Consumption blocks
+    .consumption-blocks{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .second-heading{
+        width:215px;
+    }
+
+    // hemisphere blocks
+    .hemisphere-block{
+        align-items: center;
+        margin-bottom: 100px;
+    }
+
+    .hemisphere-heading{
+        justify-content: center;
+    }
+
+    .hemisphere-heading-text{
+        font-size: 36px;
+        width:340px;
+    }
+} 
