@@ -1,0 +1,33 @@
+{
+  "name": "Zavizenov_Gleb_interactiveSVG",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gleb-zavizenov/Zavizenov_Gleb_interactiveSVG.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gleb-zavizenov/Zavizenov_Gleb_interactiveSVG/issues"
+  },
+  "homepage": "https://github.com/gleb-zavizenov/Zavizenov_Gleb_interactiveSVG#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.0.6",
+    "mysql": "^2.17.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.0",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "nodemon": "^1.19.4"
+  }
+}
