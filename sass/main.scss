@@ -170,6 +170,11 @@
     align-items: center;
     justify-content: center;
     opacity: 0;
+    transition: 0.7s opacity ease-in-out;
+}
+
+.country-show{
+    opacity:1;
 }
 
 .wine-contry-popup{
