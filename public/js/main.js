@@ -1,56 +1,34 @@
-//
-// Dynamic data for the template
-//
-// const myVM = (() => {
-//     // get the user buttons and fire off an async DB query with Fetch
-//     let userButtons = document.querySelectorAll(".section-bottom-btn");
-//     let desktopLinks = document.querySelectorAll(".nav-link");
-//     let mobileLinks = document.querySelectorAll(".mobile-nav-link");
-//     let lightBox = document.querySelector(".lightbox");
+//Dynamic data for the template
+const myVM = (() => {
+    let countries = document.querySelectorAll(".country-link");
   
-//     function parseUserData(object) {
-//       let targetDiv = lightBox.querySelector(".lb-content");
-//       let targetImage = targetDiv.querySelector(".object-img");
-//       let targetDesc = targetDiv.querySelector(".object-desc");
-
-//       lightBox.style.backgroundColor = `${object.color}`;
+    function parseUserData(object) {
+        let selectedCountry = countries[object.ID - 1];
+        let countryPopup =selectedCountry.querySelector(".contry-popup");
+        let targetCountry = selectedCountry.querySelector(".country-popup-country");
+        let alcoholData = selectedCountry.querySelector(".country-popup-alcohol-data");
+        let happinessData = selectedCountry.querySelector(".country-popup-happiness-data");
+    
+        targetCountry.innerHTML = `${object.country}`;
+        alcoholData.innerHTML = `${object.consumption}`;
+        happinessData.innerHTML = `${object.happiness}`;
+        countryPopup.classList.toggle("country-show");
+    }
   
-//       let imgContent = `<img src="images/${object.image}">`;
-//       let descContent = `
-//       <h2>${object.heading}</h2>
-//       <h4>${object.subheading}</h4>
-//       <p>${object.description}</p>
-//       `;
+    function getUserData(e) {
+      e.preventDefault();
+      let url = `/countries/${this.getAttribute("href")}`;
   
-//       targetImage.innerHTML = imgContent;
-//       targetDesc.innerHTML = descContent;
-//       lightBox.classList.add("lightbox-show");
-//     }
+      fetch(url)
+        .then(res => res.json())
+        .then(data => {
+          console.log(data);
+          parseUserData(data);
+        })
+        .catch(err => console.log(err));
+    }
   
-//     function getUserData(e) {
-//       e.preventDefault();
-//       //1, 2 , or 3 depending on which anchor tag you click
-//       let url = `/objects/${this.getAttribute("href")}`;
-  
-//       //this goes and fetches the database content ( or an API endpoint)
-//       // that's why it's called a fetch!
-  
-//       fetch(url)
-//         .then(res => res.json())
-//         .then(data => {
-//           console.log(data);
-//         //   data.currentSrc = currentImg;
-//           parseUserData(data);
-//         })
-//         .catch(err => console.log(err));
-//     }
-  
-//     userButtons.forEach(button => button.addEventListener("click", getUserData));
-//     desktopLinks.forEach(button => button.addEventListener("click", getUserData));
-//     mobileLinks.forEach(button => button.addEventListener("click", getUserData));
-  
-//     // wire up the lightbox close button
-//     lightBox.querySelector(".close-icon").addEventListener("click", function() {
-//       lightBox.classList.remove("lightbox-show");
-//     });
-//   })();
+    countries.forEach(country => {
+        country.addEventListener("click", getUserData)
+    });
+  })();
