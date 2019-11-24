@@ -32,3 +32,29 @@ const myVM = (() => {
         country.addEventListener("click", getUserData)
     });
   })();
+
+// Showimg and hising popups with hemisphere data
+let topPart = document.querySelector("#top");
+let botPart = document.querySelector("#bottom");
+let topPopup = document.querySelector("#popup1");
+let botPopup = document.querySelector("#popup2");
+let closeIcons = document.querySelectorAll(".close-icon");
+
+topPart.addEventListener("click", function(e){
+  e.preventDefault();
+  botPopup.classList.remove("hemisphere-popup-show");
+  topPopup.classList.add("hemisphere-popup-show");
+});
+
+botPart.addEventListener("click", function(e){
+  e.preventDefault();
+  botPopup.classList.add("hemisphere-popup-show");
+  topPopup.classList.remove("hemisphere-popup-show");
+});
+
+closeIcons.forEach(icon => {
+  icon.addEventListener("click", function(){
+    botPopup.classList.remove("hemisphere-popup-show");
+    topPopup.classList.remove("hemisphere-popup-show");
+  })
+})
