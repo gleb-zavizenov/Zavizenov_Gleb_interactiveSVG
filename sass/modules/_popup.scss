@@ -1,0 +1,148 @@
+//
+// Styles for the mobile version
+//
+body{
+    position: relative;
+}
+
+.hemisphere-popup{
+    position: absolute;
+    bottom:30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(116.57deg, #F37335 0%, #FDC430 100%);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    width:320px;
+    height: 550px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.hemisphere-popup-show{
+    display: flex;
+}
+
+.close-icon{
+    position: absolute;
+    top:20px;
+    right: 20px;
+}
+
+.hemisphere-popup-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:50px;
+}
+
+.hemisphere-popup-heading{
+    font-family: 'Montserrat',sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 59px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.hemisphere-popup-content{
+    :last-child{
+        margin-bottom: 0px;
+    }
+}
+
+.hemisphere-popup-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.hemisphere-popup-block-heading{
+    font-family: 'Montserrat',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 44px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.hemisphere-popup-block-data{
+    font-family: 'Montserrat',sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 29px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+//
+// Styles for the tablet version
+// 
+@media screen and (min-width:720px){
+    .hemisphere-popup{
+        width:720px;
+    }
+
+    .hemisphere-popup-container{
+        margin-top:0px;
+    }
+
+    .hemisphere-popup-heading{
+        font-size:48px;
+        margin-bottom: 60px;
+    }
+
+    .hemisphere-popup-content{
+        width:600px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+
+        :nth-child(3){
+            margin-bottom: 0px;
+        }
+
+        :last-child{
+            margin-bottom: 0px;
+        }
+    }
+
+    .hemisphere-popup-block{
+        width:45%;
+        margin-bottom: 35px;
+    }
+
+    .hemisphere-popup-block-heading{
+        font-size:30px;
+        margin-bottom: 5px;
+    }
+
+    .hemisphere-popup-block-data{
+        font-size:24px;
+    }
+}
+
+//
+// Styles for the desktop version
+//
+@media screen and (min-width:1200px){
+    
+    .close-icon{
+        cursor: pointer;
+    }
+
+    .hemisphere-popup{
+        width:1050px;
+    }
+
+    .hemisphere-popup-content{
+        width:700px;
+    }
+}

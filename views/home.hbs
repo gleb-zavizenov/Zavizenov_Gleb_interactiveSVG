@@ -143,13 +143,41 @@
                 <img src="images/globe.svg" alt="globe" class="hemispere-img-right">
             </div>
             <div class="hemisphere-icons">
-                <a href="1" class="hemisphere-icon">
+                <a href="#" id="top" class="hemisphere-icon">
                     <img src="images/north.svg" alt="north">
                 </a>
-                <a href="2" class="hemisphere-icon">
+                <a href="#" id="bottom" class="hemisphere-icon">
                     <img src="images/south.svg" alt="south">
                 </a>
             </div>
         </div>
+        {{#each sections}}
+        <div class="hemisphere-popup" id="popup{{ID}}">
+            <div class="close-icon">
+                <img src="images/cross.svg" alt="cross">
+            </div>
+            <div class="hemisphere-popup-container">
+                <h2 class="hemisphere-popup-heading">{{hemisphere}} Hemisphere</h2>
+                <div class="hemisphere-popup-content">
+                    <div class="hemisphere-popup-block">
+                        <h3 class="hemisphere-popup-block-heading">{{beer}}</h3>
+                        <div class="hemisphere-popup-block-data">average beer consumption per capita</div>
+                    </div>
+                    <div class="hemisphere-popup-block">
+                        <h3 class="hemisphere-popup-block-heading">{{vine}}</h3>
+                        <div class="hemisphere-popup-block-data">average wine consumption per capita</div>
+                    </div>
+                    <div class="hemisphere-popup-block">
+                        <h3 class="hemisphere-popup-block-heading">{{gdp}}</h3>
+                        <div class="hemisphere-popup-block-data">average GDP per capita</div>
+                    </div>
+                    <div class="hemisphere-popup-block">
+                        <h3 class="hemisphere-popup-block-heading">{{happiness}}</h3>
+                        <div class="hemisphere-popup-block-data">average happiness rate</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
     </div>
 </div>
