@@ -299,9 +299,10 @@
 
 
 //
-// Styles for tablet version
+// Styles for the tablet version
 //
 @media screen and (min-width:720px){
+    
     .container{
         width:720px;
     }
@@ -350,3 +351,110 @@
         width:340px;
     }
 } 
+
+//
+// Styles for the desktop version
+//
+@media screen and (min-width:1200px){
+    
+    .container{
+        width:1200px;
+    }
+
+    .main-heading{
+        margin-top:100px;
+        font-size: 96px;
+        margin-bottom: 150px;
+    }
+
+    // Emoji blocks
+    .emoji-blocks{
+        margin-bottom: 70px;
+    }
+
+    .emoji-block{
+        width:441px;
+    }
+
+    // Beer-bottle-block
+    .beer-bottle-block{
+        display: none;
+    }
+
+    // Consumption blocks
+    .consumption-blocks{
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+
+    .consumption-block{
+        width:50%;
+        margin-bottom: 90px;
+    }
+
+    .consumption-heading{
+        width:520px;
+
+        img{
+            height:65px;
+        }
+    }
+
+    .heading-img{
+        width: 65px;
+        height:65px;
+    }
+
+    .second-heading{
+        font-size:72px;
+        width:430px;
+        line-height: 88px;
+    }
+
+    .consumption-inside{
+        flex-direction: row;
+        width: 665px;
+        justify-content: space-between;
+    }
+
+    .country-link{
+        margin-bottom: 0px;
+    }
+
+    // Hemisphere block
+    .hemisphere-block{
+        margin-bottom: 150px;
+    }
+
+    .hemisphere-heading{
+        img{
+            height:65px;
+        }
+    }
+
+    .hemisphere-heading-text{
+        font-size:72px;
+        width:572px;
+        line-height:88px;
+    }
+
+    .hemispere-img-left{
+        width: 65px;
+        height: 65px;
+    }
+
+    .hemispere-img-right{
+        width: 65px;
+        height:65px;
+    }
+
+    .hemisphere-icons{
+        margin-top: 90px;
+        width:700px;
+        height:700px;
+    }
+
+    .hemisphere-icon{
+        height:100%;
+    }
+}
